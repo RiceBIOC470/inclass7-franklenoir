@@ -37,6 +37,9 @@ stop = genbankinfo.CDS.indices(2);
 % Hint: see the field "Features". 
 
 proteininfo = genbankinfo.CDS.protein_id;
-proteininfo = getgenpept(proteininfo);
-proteininfo.Features;
-%In the features it states that the homeobox is located between "Region 190..242"
+protein_cdx2 = getgenpept(proteininfo);
+genbankinfo.CDS.protein_id;
+
+%At nucleotide position 1256 in the sequence exists the conserved homeobox domain of the protein.
+%This occurs are around the P amino acid at position 297 (out of 313) in the amino
+%acid sequence.
